@@ -168,7 +168,8 @@ class MambuClient(object):
         headers = {}
         # Endpoint: simple API call to return a single record (org settings) to test access
         # https://support.mambu.com/docs/organisational-settings-api#get-organisational-settings
-        endpoint = '/setup/organization'
+        # Using branches API temporarily.
+        endpoint = '/branches'
         url = '{}/{}'.format(self.base_url, endpoint)
         headers['User-Agent'] = self.__user_agent
         headers['Accept'] = 'application/vnd.mambu.v2+json'
